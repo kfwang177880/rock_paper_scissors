@@ -1,27 +1,27 @@
 import React from 'react'
 
-const scissors = "https://i.imgur.com/pgjyhIZ.png";
-const rock = "https://i.imgur.com/LghSkIw.png";
-const paper = "https://i.imgur.com/2gsdqvR.png";
+const scissors = 'https://i.imgur.com/pgjyhIZ.png';
+const rock = 'https://i.imgur.com/LghSkIw.png';
+const paper = 'https://i.imgur.com/2gsdqvR.png';
 
 const PlayerCard = (props) => {
-    const sign = props.sign
-    const image = ""
+  const sign = props.sign
+  let image = ''
 
-    if (sign === "rock") {
-        image = rock;
-    } else if (sign === "paper") {
-        image = paper;
-    } else {
-        image = scissors
-    }
+  if (sign === "rock") {
+    image = rock;
+  } else if (sign === "paper") {
+    image = paper;
+  } else {
+    image = scissors
+  }
 
-    return (
+  return (
 //        <div className="playerCard">{props.sign}</div>
-        <div className="player-card">{props.sign}
-            <img src={image}/>
-        </div>
-    )
+    <div className="playerCard">
+      <img src={image}/>
+    </div>
+  )
 }
 
 export default PlayerCard;
